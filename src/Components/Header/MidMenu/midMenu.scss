@@ -1,0 +1,109 @@
+.midMenu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: {
+    top:30px;
+    left: auto;
+    right: auto;
+  };
+
+  .logoBar{
+    a{
+      display: flex;
+      align-items: center;
+      color: Black;
+      font-family: 'Poppins500', serif;
+      .logoText{
+        font-size: 32px;
+      }
+      .logoSvg{
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .searchBar{
+    position: relative;
+    width: 30%;
+    &__input{
+      border: 1px solid rgb(215, 215, 215);
+      padding: 12px 16px 12px 25px;
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      font-family: "Poppins400", serif;
+      font-size: 15px;
+      width: 100%;
+    }
+    &__loupe{
+      position: absolute;
+      top: 13px;
+      left: 4px;
+    }
+    &__butt{
+      font-family: 'Poppins600', serif;
+      font-size: 16px;
+      position: absolute;
+      border: none;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      background-color: #00B207;
+      color: white;
+      height: 49px;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+      &:hover{
+        background-color: #2c742F;
+      }
+    }
+  }
+
+  .userDecision{
+    display: flex;
+    align-items: center;
+    &__like{
+      cursor: pointer;
+    }
+    &__cart{
+      display: flex;
+      align-items: center;
+      margin-left: 32px;
+      position: relative;
+      .cart__bag{
+        position: relative;
+        cursor: pointer;
+      }
+      .cart__price {
+        margin-left: 12px;
+        p {
+          color: rgba(102, 102, 102, 1);
+          font-family: 'Poppins400', serif;
+          font-size: 11px;
+        }
+        h5 {
+          font-family: 'Poppins500', serif;
+          font-size: 14px;
+          margin-left: 0;
+        }
+      }
+      .inCart{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2c742F;
+        border-radius: 16px;
+        padding: 3.5px 6px 3.5px 6px;
+        width: 18px;
+        height: 18px;
+        color: white;
+        font-size: 10px;
+        font-family: 'Poppins500', serif;
+        top: 1px;
+        left: 18px;
+        border: 1px solid white;
+      }
+    }
+  }
+}

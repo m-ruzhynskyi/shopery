@@ -1,0 +1,46 @@
+.wrapBotMenu{
+  margin-top: 24px;
+  background-color: rgba(51, 51, 51, 1);
+  .botMenu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Poppins500', serif;
+    font-size: 14px;
+    max-width: 1400px;
+    margin: {
+      right: auto;
+      left: auto;
+    };
+    padding: {
+      top: 16px;
+      bottom: 16px;
+    };
+
+    .sections{
+      display: flex;
+      justify-content: space-between;
+      color: rgba(153, 153, 153, 1);
+      width: 30%;
+      .section{
+        cursor: pointer;
+        transition: .3s all ease-in;
+        &:hover{
+          color: rgb(225, 225, 225);
+        }
+      }
+    }
+    .tel{
+      display: flex;
+      align-items: center;
+      .tel__tel{
+        color: white;
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.active{
+  color: rgba(255, 255, 255, 1);
+}
