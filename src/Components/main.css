@@ -1,0 +1,293 @@
+.topMenu {
+  color: rgb(102, 102, 102);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Poppins400", serif;
+  font-size: 12px;
+  padding: 12px 0;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.topMenu .location {
+  display: flex;
+  align-items: center;
+}
+.topMenu .location .location__svg {
+  margin-right: 8px;
+}
+.topMenu .smallMenu {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  width: 18%;
+}
+.topMenu .smallMenu .mainOptionsSite select {
+  color: rgb(102, 102, 102);
+  border: none;
+  font-family: "Poppins400", serif;
+  font-size: 12px;
+}
+.topMenu .smallMenu .mainOptionsSite select:not(:last-child) {
+  margin-right: 20px;
+}
+.topMenu .smallMenu .account {
+  transform: translateY(1px);
+  display: flex;
+}
+.topMenu .smallMenu .account p:not(:nth-child(2)) {
+  cursor: pointer;
+  transition: 0.5s;
+  border-bottom: none;
+}
+.topMenu .smallMenu .account p:not(:nth-child(2)):hover {
+  color: #00B207;
+  border-bottom: 1px solid #84D187;
+}
+
+hr {
+  border: none;
+  border-bottom: 0.5px solid rgb(215, 215, 215);
+}
+
+.midMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.midMenu .logoBar a {
+  display: flex;
+  align-items: center;
+  color: Black;
+  font-family: "Poppins500", serif;
+}
+.midMenu .logoBar a .logoText {
+  font-size: 32px;
+}
+.midMenu .logoBar a .logoSvg {
+  margin-right: 5px;
+}
+.midMenu .searchBar {
+  position: relative;
+  width: 30%;
+}
+.midMenu .searchBar__input {
+  border: 1px solid rgb(215, 215, 215);
+  padding: 12px 16px 12px 25px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  font-family: "Poppins400", serif;
+  font-size: 15px;
+  width: 100%;
+}
+.midMenu .searchBar__loupe {
+  position: absolute;
+  top: 13px;
+  left: 4px;
+}
+.midMenu .searchBar__butt {
+  font-family: "Poppins600", serif;
+  font-size: 16px;
+  position: absolute;
+  border: none;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #00B207;
+  color: white;
+  height: 49px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.midMenu .searchBar__butt:hover {
+  background-color: #2c742F;
+}
+.midMenu .userDecision {
+  display: flex;
+  align-items: center;
+}
+.midMenu .userDecision__like {
+  cursor: pointer;
+}
+.midMenu .userDecision__cart {
+  display: flex;
+  align-items: center;
+  margin-left: 32px;
+  position: relative;
+}
+.midMenu .userDecision__cart .cart__bag {
+  position: relative;
+  cursor: pointer;
+}
+.midMenu .userDecision__cart .cart__price {
+  margin-left: 12px;
+}
+.midMenu .userDecision__cart .cart__price p {
+  color: rgb(102, 102, 102);
+  font-family: "Poppins400", serif;
+  font-size: 11px;
+}
+.midMenu .userDecision__cart .cart__price h5 {
+  font-family: "Poppins500", serif;
+  font-size: 14px;
+  margin-left: 0;
+}
+.midMenu .userDecision__cart .inCart {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2c742F;
+  border-radius: 16px;
+  padding: 3.5px 6px 3.5px 6px;
+  width: 18px;
+  height: 18px;
+  color: white;
+  font-size: 10px;
+  font-family: "Poppins500", serif;
+  top: 1px;
+  left: 18px;
+  border: 1px solid white;
+}
+
+.wrapBotMenu {
+  margin-top: 24px;
+  background-color: rgb(51, 51, 51);
+}
+.wrapBotMenu .botMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Poppins500", serif;
+  font-size: 14px;
+  max-width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.wrapBotMenu .botMenu .sections {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(153, 153, 153);
+  width: 30%;
+}
+.wrapBotMenu .botMenu .sections .section {
+  cursor: pointer;
+  transition: 0.3s all ease-in;
+}
+.wrapBotMenu .botMenu .sections .section:hover {
+  color: rgb(225, 225, 225);
+}
+.wrapBotMenu .botMenu .tel {
+  display: flex;
+  align-items: center;
+}
+.wrapBotMenu .botMenu .tel .tel__tel {
+  color: white;
+  margin-left: 8px;
+}
+
+.active {
+  color: rgb(255, 255, 255);
+}
+
+.head {
+  margin-top: 25px;
+  position: relative;
+}
+.head .slide {
+  border-radius: 8px;
+  background-color: rgb(218, 229, 218);
+  padding-top: 100px;
+  padding-bottom: 180px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row-reverse;
+  position: relative;
+}
+.head .slide .slide__photo {
+  margin-right: 3%;
+  width: 705px;
+  height: 500px;
+}
+.head .slide .text {
+  margin-left: 6%;
+  max-width: 568px;
+}
+.head .slide .text .text__motto {
+  font-size: 14px;
+  font-family: "Poppins500", serif;
+  text-transform: uppercase;
+  color: #2c742F;
+  margin-bottom: 8px;
+}
+.head .slide .text .text__title {
+  font-size: 71px;
+  font-family: "Poppins600", serif;
+  text-transform: capitalize;
+  color: black;
+  line-height: 120%;
+  margin-bottom: 28px;
+}
+.head .slide .text .text__discount {
+  font-size: 31px;
+  font-family: "Poppins500", serif;
+  text-transform: none;
+  color: black;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.head .slide .text .text__discount .text__discountHighlight {
+  color: #FF8A00;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.head .slide .text .text__paragraph {
+  font-size: 14pxnone;
+  font-family: "Poppins400", serif;
+  text-transform: none;
+  color: rgb(128, 128, 128);
+  margin-bottom: 32px;
+}
+.head .benefits {
+  position: absolute;
+  background: white;
+  border-radius: 8px;
+  right: 50px;
+  bottom: -60px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 1300px;
+}
+.head .benefits .benefits__benefit {
+  display: flex;
+}
+.head .benefits .benefits__benefit .benefit__text {
+  margin-left: 16px;
+  font-size: 14px;
+  font-family: "Poppins400", serif;
+  text-transform: none;
+  color: rgb(153, 153, 153);
+}
+.head .benefits .benefits__benefit .benefit__text .benefit__title {
+  font-size: 16px;
+  font-family: "Poppins400", serif;
+  text-transform: capitalize;
+  color: black;
+  font-weight: 600;
+}
+
+.home {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,4 +1,4 @@
-import './botMenu.css'
+import '../../main.css'
 export default function BotMenu({setPage}) {
     return (
         <div className='wrapBotMenu'>

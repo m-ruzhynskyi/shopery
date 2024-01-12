@@ -1,0 +1,6 @@
+@import "./Head/head";
+
+.home{
+  max-width: $screen-lr;
+  @include autoMargin();
+}

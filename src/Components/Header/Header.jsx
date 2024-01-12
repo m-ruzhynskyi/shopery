@@ -1,8 +1,7 @@
-import './header.css'
+import '../main.css'
 import TopMenu from "./TopMenu/TopMenu";
 import MidMenu from "./MidMenu/MidMenu";
 import BotMenu from "./BotMenu/BotMenu";
-import {useState} from "react";
 
 export default function Header ({setPage}){
     return (

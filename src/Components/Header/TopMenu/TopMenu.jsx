@@ -1,4 +1,4 @@
-import './topMenu.css'
+import '../../main.css'
 
 export default function TopMenu(){
     return(

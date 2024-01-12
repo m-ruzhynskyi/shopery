@@ -1,7 +1,7 @@
-import './midMenu.css'
+import '../../main.css'
 import CartLog from "../TopMenu/CartLog";
 export default function MidMenu({bag, fullPrice}){
-    const numbersInCart = 12
+    const numbersInCart = 0
         return(
         <div className='midMenu'>
             <div className='logoBar'>

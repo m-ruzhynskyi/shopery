@@ -1,0 +1,71 @@
+.head{
+  margin-top: 25px;
+  position: relative;
+  .slide{
+    border-radius: 8px;
+    background-color: rgba(218, 229, 218, 1);
+    padding: {
+      top: 100px;
+      bottom: 180px;
+    };
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row-reverse;
+    position: relative;
+    .slide__photo{
+      margin-right: 3%;
+      width: 705px;
+      height: 500px;
+    }
+    .text{
+      margin-left:6%;
+      max-width: 568px;
+      .text__motto{
+        @include setFont(500, 0, uppercase, $hardPrimary);
+        margin-bottom: 8px;
+      }
+      .text__title{
+        @include setFont(600, 57, capitalize, black);
+        line-height: 120%;
+        margin-bottom: 28px;
+      }
+      .text__discount{
+        @include setFont(500, 17, none, black);
+        font-weight: 400;
+        margin-bottom: 12px;
+        .text__discountHighlight{
+          color: $warning;
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+      }
+      .text__paragraph{
+        @include setFont(400, none, none, rgb(128, 128, 128));
+        margin-bottom: 32px;
+      }
+    }
+  }
+  .benefits{
+    position: absolute;
+    background: white;
+    border-radius: 8px;
+    right: 50px;
+    bottom: -60px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: $screen-lr - 100;
+    .benefits__benefit{
+      display: flex;
+      .benefit__text{
+        margin-left: 16px;
+        @include setFont(400, 0, none, rgb(153, 153, 153));
+        .benefit__title{
+          @include setFont(400, 2, capitalize, black);
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

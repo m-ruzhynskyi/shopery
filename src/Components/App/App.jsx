@@ -1,5 +1,6 @@
 import Header from '../Header/Header'
 import {useState} from "react";
+import Main from "../Main/Main";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
         <Header setPage={(current) => changePage(current)} />
+        <Main page={page} />
     </>
   );
 }
