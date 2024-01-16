@@ -1,9 +1,10 @@
-import {main} from '../dataMain'
 import Head from "./Head/Head";
-export default function Home(){
+import IntroProducts from "./IntroProducts/IntroProducts";
+export default function Home({data, setCart, setLikes}){
     return(
         <div className='home'>
-            <Head data={main.head}/>
+            <Head data={data.head}/>
+            <IntroProducts data={data.introOurProducts} setCart={setCart} setLikes={setLikes}/>
         </div>
     )
 }

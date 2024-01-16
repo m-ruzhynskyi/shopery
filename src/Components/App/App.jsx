@@ -4,17 +4,31 @@ import Main from "../Main/Main";
 
 
 function App() {
-    const [page, setPage] = useState("home");
-    function changePage(page) {
-        setPage(page.textContent.toLowerCase())
-        for(const p of page.parentElement.children){
-            (p.textContent === page.textContent) ? p.classList.add('active'): p.classList.remove('active')
-        }
-    }
+    let [cart, setCart] = useState(0);
+    let [likes, setLikes] = useState(0);
+
+     function changeNumInCart(current) {
+         let curProduct = current.target.closest('.product')
+         let i = 1
+         if(curProduct.classList.toggle('inCart')){
+             setCart(cart +=i);
+         }else {
+             cart !== 0 && setCart(cart -=1);
+         }
+     }
+     function changeNumLikes(current) {
+         let curProduct = current.target.closest('.product')
+         let i = 1
+         if(curProduct.classList.toggle('isLiked')){
+             setLikes(likes +=i);
+         }else {
+             likes !== 0 && setLikes(likes -=1);
+         }     }
+
   return (
     <>
-        <Header setPage={(current) => changePage(current)} />
-        <Main page={page} />
+        <Header cart={cart} likes={likes}/>
+        <Main setCart={(current) => changeNumInCart(current)} setLikes={(current) => changeNumLikes(current)}/>
     </>
   );
 }

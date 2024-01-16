@@ -56,6 +56,7 @@
     display: flex;
     justify-content: space-between;
     width: $screen-lr - 100;
+    box-shadow: 0px 8px 40px 0px rgba(0, 38, 3, 0.08);
     .benefits__benefit{
       display: flex;
       .benefit__text{
@@ -65,6 +66,15 @@
           @include setFont(400, 2, capitalize, black);
           font-weight: 600;
         }
+      }
+    }
+  }
+  .splide__pagination{
+    transform: translateY(-90px);
+    .splide__pagination__page{
+      background-color: #84D187;
+      &.is-active{
+        background-color: #00B207;
       }
     }
   }

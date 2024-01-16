@@ -1,3 +1,5 @@
+@import './LikedCatalog/likedCAtalog';
+
 .midMenu{
   display: flex;
   align-items: center;
@@ -64,6 +66,7 @@
     align-items: center;
     &__like{
       cursor: pointer;
+      position: relative;
     }
     &__cart{
       display: flex;
@@ -87,23 +90,23 @@
           margin-left: 0;
         }
       }
-      .inCart{
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #2c742F;
-        border-radius: 16px;
-        padding: 3.5px 6px 3.5px 6px;
-        width: 18px;
-        height: 18px;
-        color: white;
-        font-size: 10px;
-        font-family: 'Poppins500', serif;
-        top: 1px;
-        left: 18px;
-        border: 1px solid white;
-      }
+    }
+    .inCart, .inLiked{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #2c742F;
+      border-radius: 16px;
+      padding: 3.5px 6px 3.5px 6px;
+      width: 18px;
+      height: 18px;
+      color: white;
+      font-size: 10px;
+      font-family: 'Poppins500', serif;
+      top: 1px;
+      left: 18px;
+      border: 1px solid white;
     }
   }
 }

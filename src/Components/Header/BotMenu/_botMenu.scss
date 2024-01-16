@@ -20,9 +20,9 @@
     .sections{
       display: flex;
       justify-content: space-between;
-      color: rgba(153, 153, 153, 1);
       width: 30%;
       .section{
+        color: rgba(153, 153, 153, 1);
         cursor: pointer;
         transition: .3s all ease-in;
         &:hover{
@@ -42,5 +42,5 @@
 }
 
 .active{
-  color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1) !important;
 }

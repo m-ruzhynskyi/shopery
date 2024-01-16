@@ -1,14 +1,15 @@
 import '../../main.css'
+import {NavLink} from "react-router-dom";
 export default function BotMenu({setPage}) {
     return (
         <div className='wrapBotMenu'>
             <div className='botMenu'>
                 <div className='sections'>
-                    <p className='section active' onClick={(e) => setPage(e.target)}>Home</p>
-                    <p className='section' onClick={(e) => setPage(e.target)}>Shop</p>
-                    <p className='section' onClick={(e) => setPage(e.target)}>Blog</p>
-                    <p className='section' onClick={(e) => setPage(e.target)}>About Us</p>
-                    <p className='section' onClick={(e) => setPage(e.target)}>Contact Us</p>
+                    <NavLink className='section' to='home'>Home</NavLink>
+                    <NavLink className='section' to='shop'>Shop</NavLink>
+                    <NavLink className='section' to='blog'>Blog</NavLink>
+                    <NavLink className='section' to='aboutUs'>About Us</NavLink>
+                    <NavLink className='section' to='contactUs'>Contacts Us</NavLink>
                 </div>
                 <div className='tel'>
                     <svg className='tel__telSvg' xmlns="http://www.w3.org/2000/svg" width="28" height="28"

@@ -1,4 +1,5 @@
 export default function CartLog ({numbersInCart}) {
+    
     function createByuInd (i){
         return (
             <div className='inCart'>
@@ -8,10 +9,10 @@ export default function CartLog ({numbersInCart}) {
     }
 
     return (
-        <div className='cartLog'>
+        <>
             {
                 (numbersInCart)? createByuInd(numbersInCart): null
             }
-        </div>
+        </>
     )
 }
