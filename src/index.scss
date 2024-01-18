@@ -2,6 +2,17 @@
   margin: 0;
   box-sizing: border-box;
   outline: none;
+  scroll-behavior: smooth;
+}
+
+.goToTop svg{
+  position: sticky;
+  bottom: 85px;
+  left: 93%;
+  padding: 15px;
+  box-sizing: unset;
+  background: #DAE5DA;
+  border-radius: 50px;
 }
 
 @font-face {

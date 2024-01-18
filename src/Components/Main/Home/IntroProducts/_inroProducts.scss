@@ -30,7 +30,7 @@
       display: flex;
       align-items: center;
     }
-    .sort__cat p{
+    .sort__cat a{
       cursor: pointer;
     }
     .sort__cat::after{
@@ -44,7 +44,7 @@
         right: clamp(0rem, 1.611vw - 0.433rem, 1.5rem);
       };
     }
-    .activeCat p{
+    .activeCat a{
       border-bottom: 1px solid $primary;
       color: $primary;
       background-color: #d5f4d7;

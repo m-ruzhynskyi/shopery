@@ -62,7 +62,7 @@ export const main = {
             }
         ]
     },
-    introOurProducts:[
+    ourProducts:[
         {
             id: 1,
             img: '/assets/img/main/introOurProducts/Image.png',
@@ -70,6 +70,7 @@ export const main = {
             price: 14.99,
             stars: 4,
             category: 'fruit',
+            type: "intro",
         },
         {
             id: 2,
@@ -79,6 +80,7 @@ export const main = {
             oldPrice: 20.99,
             stars: 5,
             category: 'vegetable',
+            type: "intro",
         },
         {
             id: 3,
@@ -87,6 +89,7 @@ export const main = {
             price: 14.99,
             stars: 4,
             category: "vegetable",
+            type: "intro",
         },
         {
             id: 4,
@@ -94,7 +97,8 @@ export const main = {
             title: 'Green Chilli',
             price: 14.99,
             stars: 4,
-            category: "vegetable"
+            category: "vegetable",
+            type: "intro",
         },
         {
             id: 5,
@@ -102,7 +106,8 @@ export const main = {
             title: 'Fresh Cauliflower ',
             price: 14.99,
             stars: 5,
-            category: "vegetable"
+            category: "vegetable",
+            type: "intro",
         },
         {
             id: 6,
@@ -110,7 +115,8 @@ export const main = {
             title: 'Eggplant',
             price: 14.99,
             stars: 5,
-            category: "vegetable"
+            category: "vegetable",
+            type: "intro",
         },
         {
             id: 7,
@@ -119,7 +125,8 @@ export const main = {
             price: 14.99,
             oldPrice: 20.99,
             stars: 4,
-            category: 'fruit'
+            category: 'fruit',
+            type: "intro",
         },
         {
             id: 8,
@@ -127,7 +134,8 @@ export const main = {
             title: 'Tomatoes',
             price: 14.99,
             stars: 4,
-            category: 'vegetable'
+            category: 'vegetable',
+            type: "intro",
         },
     ]
 }

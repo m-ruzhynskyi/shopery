@@ -1,7 +1,7 @@
 import '../../../main.css'
+import {NavLink} from "react-router-dom";
 
-export default function ProductCard({product, setCart, setLikes}){
-
+export default function ProductCard({product, setCart, setLikes, setProdView}){
     function createStars(stars, id){
         let rating = []
         for(let i = 0; i < stars; i++){
@@ -34,9 +34,8 @@ export default function ProductCard({product, setCart, setLikes}){
             </div>
         )
     }
-
     return (
-        <div className={'product ' + product.category} key={product.id}>
+        <div className={'product ' + product.category} key={product.id} id={product.id}>
             <img src={product.img} alt={product.title} className='product__image'/>
             <div className="product__buttons">
                 <svg onClick={setLikes} className='buttons__liked' xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -45,14 +44,17 @@ export default function ProductCard({product, setCart, setLikes}){
                         d="M12.4997 21.0541C-7.49987 9.99997 6.50011 -2.00003 12.4997 5.58803C18.5001 -2.00003 32.5001 9.99997 12.4997 21.0541Z"
                         stroke="#002603" strokeWidth="1.5"/>
                 </svg>
-                <svg className='buttons__see' xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                        d="M12.5 4.24927C5 4.24927 2 12.0001 2 12.0001C2 12.0001 5 19.7493 12.5 19.7493C20 19.7493 23 12.0001 23 12.0001C23 12.0001 20 4.24927 12.5 4.24927V4.24927Z"
-                        stroke="#002603" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path
-                        d="M12.5 15.75C13.4946 15.75 14.4484 15.3549 15.1517 14.6517C15.8549 13.9484 16.25 12.9946 16.25 12C16.25 11.0054 15.8549 10.0516 15.1517 9.34835C14.4484 8.64509 13.4946 8.25 12.5 8.25C11.5054 8.25 10.5516 8.64509 9.84835 9.34835C9.14509 10.0516 8.75 11.0054 8.75 12C8.75 12.9946 9.14509 13.9484 9.84835 14.6517C10.5516 15.3549 11.5054 15.75 12.5 15.75V15.75Z"
-                        stroke="#002603" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <NavLink to={product.title}>
+                    <svg onClick={setProdView} className='buttons__see' xmlns="http://www.w3.org/2000/svg" width="23"
+                         height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M12.5 4.24927C5 4.24927 2 12.0001 2 12.0001C2 12.0001 5 19.7493 12.5 19.7493C20 19.7493 23 12.0001 23 12.0001C23 12.0001 20 4.24927 12.5 4.24927V4.24927Z"
+                            stroke="#002603" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path
+                            d="M12.5 15.75C13.4946 15.75 14.4484 15.3549 15.1517 14.6517C15.8549 13.9484 16.25 12.9946 16.25 12C16.25 11.0054 15.8549 10.0516 15.1517 9.34835C14.4484 8.64509 13.4946 8.25 12.5 8.25C11.5054 8.25 10.5516 8.64509 9.84835 9.34835C9.14509 10.0516 8.75 11.0054 8.75 12C8.75 12.9946 9.14509 13.9484 9.84835 14.6517C10.5516 15.3549 11.5054 15.75 12.5 15.75V15.75Z"
+                            stroke="#002603" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                </NavLink>
             </div>
             <div className="product__bottom">
                 <div className='product__text'>
@@ -61,7 +63,8 @@ export default function ProductCard({product, setCart, setLikes}){
                     {createStars(product.stars, product.id)}
                 </div>
                 <div className="product__cart" onClick={setCart}>
-                    <svg className='inCart' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <svg className='inCart' xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                         viewBox="0 0 24 24" fill="none">
                         <path
                             d="M8.5 10H5.5L3.5 21H21.5L19.5 10H16.5M8.5 10V7C8.5 4.79086 10.2909 3 12.5 3V3C14.7091 3 16.5 4.79086 16.5 7V10M8.5 10H16.5M8.5 10V13M16.5 10V13"
                             stroke="white" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>

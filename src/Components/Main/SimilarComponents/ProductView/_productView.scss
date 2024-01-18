@@ -1,0 +1,141 @@
+.productView{
+  width: clamp(65rem, 27.632vw + 44.967rem, 78.125rem);
+  height: 636px;
+  background-color: white;
+  display: flex;
+  border-radius: 8px;
+  padding: 40px;
+  position: fixed;
+  bottom: 18%;
+  margin-left: 4.5%;
+  z-index: 100;
+  .product__image{
+    width: 556px;
+    height: 556px;
+  }
+  .info{
+    position: relative;
+    .productView__close{
+      position: absolute;
+      right: 0;
+      bottom: 545px;
+    }
+    .head{
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(230, 230, 230, 1);
+      .head__title {
+        @include setFont(600, 22, capitalize, rgba(26, 26, 26, 1));
+      }
+      .head__ratingBar{
+        display: flex;
+        margin: {
+          top: 12px;
+          bottom: 20px;
+        };
+        .ratingBar__rating{
+          display: flex;
+          align-items: center;
+          margin-right: 10px;
+          svg{cursor: unset}
+        }
+        .rating__num{
+          @include setFont(400, 0, capitalize, rgba(102, 102, 102, 1));
+
+        }
+      }
+      .head__price{
+          @include setFont(500, 10, none, rgba(44, 116, 47, 1))
+      }
+    }
+    .main{
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(230, 230, 230, 1);
+      margin-top: 24px;
+      .main__info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .info__brand{
+          display: flex;
+          align-items: center;
+          .brand__text{
+            @include setFont(400, 0, capitalize, rgba(26, 26, 26, 1));
+          }
+          .brand__brand{
+            display: flex;
+            padding: 12px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            border: 1px solid rgba(230, 230, 230, 1);
+            font-family: "Source Code Pro", serif;
+            font-size: 13px;
+            color: rgba(85, 85, 85, 1);
+          }
+        }
+        .info__socials{
+          display: flex;
+          align-items: center;
+          .socials__text{
+            @include setFont(400, 0, capitalize, rgba(26, 26, 26, 1));
+          }
+          .socials__svg{
+            padding: 11px;
+            box-sizing: unset;
+            border-radius: 15px;
+            transition: 0.3s all ease-in-out;
+          }
+          .socials__svg:not(:last-child){
+            margin-right: 5px;
+          }
+          .socials__svg:hover{
+            background-color: $primary;
+            g{
+              path{
+                fill: white;
+              }
+            }
+          }
+        }
+      }
+      .info__descr{
+        margin-top: 16px;
+        text-align: justify;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(230, 230, 230, 1);
+        @include setFont(400, 0, none, rgba(128, 128, 128, 1));
+      }
+      .buttons{
+        margin-top: 24px;
+        display: flex;
+        flex-direction: row;
+        .buttons__addToCart{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(0, 178, 7, 1);
+          width: 70%;
+          svg{
+            margin-left: 10px;
+            transform: translateY(-2px);
+          }
+        }
+        .buttons__like{
+          display: flex;
+          justify-content: center;
+          background-color: rgb(218, 229, 218);
+          width: 30%;
+        }
+      }
+    }
+    .footer{
+      margin-top: 24px;
+      @include setFont(500, 0, capitalize, rgba(26, 26, 26, 1));
+      .footer__category{
+        @include setFont(400, 0, capitalize, rgba(128, 128, 128, 1));
+
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import '../../main.css'
 import CartLog from "./CartLog";
 import LikeLog from "./LikeLog";
-export default function MidMenu({cart, likes, fullPrice}){
+export default function MidMenu({cart, likes, sumCart, changeLikes, changeCart}){
         return(
         <div className='midMenu'>
             <div className='logoBar'>
@@ -29,7 +29,7 @@ export default function MidMenu({cart, likes, fullPrice}){
                 <button className='searchBar__butt'>Search</button>
             </div>
             <div className='userDecision'>
-                <div className="userDecision__like">
+                <div onClick={changeLikes} className="userDecision__like">
                     <svg className='userDecision__like' xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
                         <path
                             d="M15.999 28.5722C-10.6672 13.8333 7.9995 -2.16666 15.999 7.95075C23.9995 -2.16666 42.6661 13.8333 15.999 28.5722Z"
@@ -38,7 +38,7 @@ export default function MidMenu({cart, likes, fullPrice}){
                     <LikeLog numbersInLiked={likes}/>
                 </div>
                 <div className='userDecision__cart'>
-                    <svg className='cart__bag' xmlns="http://www.w3.org/2000/svg" width="34" height="35"
+                    <svg onClick={changeCart} className='cart__bag' xmlns="http://www.w3.org/2000/svg" width="34" height="35"
                          viewBox="0 0 34 35" fill="none">
                         <path
                             d="M11.3333 14.6667H7.08333L4.25 30.25H29.75L26.9167 14.6667H22.6667M11.3333 14.6667V10.4167C11.3333 7.28705 13.8704 4.75 17 4.75V4.75C20.1296 4.75 22.6667 7.28705 22.6667 10.4167V14.6667M11.3333 14.6667H22.6667M11.3333 14.6667V18.9167M22.6667 14.6667V18.9167"
@@ -47,7 +47,7 @@ export default function MidMenu({cart, likes, fullPrice}){
                     <CartLog numbersInCart={cart}/>
                     <div className='cart__price'>
                         <p className='cart__title'>Shopping cart: </p>
-                        <h5 className='cart__price'>$0.00</h5>
+                        <h5 className='cart__price'>${sumCart}</h5>
                     </div>
                 </div>
             </div>
