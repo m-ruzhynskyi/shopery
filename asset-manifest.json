@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/shopery/static/css/main.5a48b573.css",
+    "main.js": "/shopery/static/js/main.5f45dd2d.js",
+    "static/media/Poppins-Light.ttf": "/shopery/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
+    "static/media/Poppins-Regular.ttf": "/shopery/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
+    "static/media/Poppins-Medium.ttf": "/shopery/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
+    "static/media/Poppins-SemiBold.ttf": "/shopery/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
+    "static/media/Poppins-Bold.ttf": "/shopery/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
+    "static/media/404.png": "/shopery/static/media/404.3dedc6cc12bcb2ce8e31.png",
+    "index.html": "/shopery/index.html",
+    "main.5a48b573.css.map": "/shopery/static/css/main.5a48b573.css.map",
+    "main.5f45dd2d.js.map": "/shopery/static/js/main.5f45dd2d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a48b573.css",
+    "static/js/main.5f45dd2d.js"
+  ]
+}
