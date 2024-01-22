@@ -1,6 +1,6 @@
 import '../../main.css'
 import {NavLink} from "react-router-dom";
-export default function BotMenu({}) {
+export default function BotMenu() {
     return (
         <div className='wrapBotMenu'>
             <div className='botMenu'>
