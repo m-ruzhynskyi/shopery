@@ -1,10 +1,11 @@
-import Header from '../Header/Header'
+import Header from '../Components/Header/Header'
 import {useEffect, useState} from "react";
-import Main from "../Main/Main";
-import {main} from "../dataMain";
-import Footer from "../Footer/Footer";
+import Main from "../Components/Main/Main";
+import Footer from "../Components/Footer/Footer";
+import axios from "axios";
 
 function App() {
+    const [main, setMain] = useState([])
     let [cart, setCart] = useState(0);
     let [likes, setLikes] = useState(0);
     const [likesHistory, setLikeHistory] = useState([])
@@ -55,6 +56,10 @@ function App() {
         }
         //eslint-disable-next-line
     }, [cart]);
+    useEffect(() => {
+        axios.get('https://65ae363a1dfbae409a744145.mockapi.io/shoperly')
+            .then(r => setMain(r.data[0]))
+    }, []);
 
   return (
     <>

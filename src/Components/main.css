@@ -527,6 +527,8 @@ svg {
 }
 .product .product__image {
   transition: 0.3s ease-in-out all;
+  width: 320px;
+  height: 300px;
 }
 .product .product__buttons {
   display: flex;
@@ -626,9 +628,10 @@ svg {
   bottom: 18%;
   margin-left: 4.5%;
   z-index: 100;
+  gap: 25px;
 }
 .productView .product__image {
-  width: 556px;
+  width: 526px;
   height: 556px;
 }
 .productView .info {
@@ -763,14 +766,14 @@ svg {
   background-color: rgb(218, 229, 218);
   width: 30%;
 }
-.productView .info .footer {
+.productView .info .footerView {
   margin-top: 24px;
   font-size: 14px;
   font-family: "Poppins500", serif;
   text-transform: capitalize;
   color: rgb(26, 26, 26);
 }
-.productView .info .footer .footer__category {
+.productView .info .footerView .footer__category {
   font-size: 14px;
   font-family: "Poppins400", serif;
   text-transform: capitalize;

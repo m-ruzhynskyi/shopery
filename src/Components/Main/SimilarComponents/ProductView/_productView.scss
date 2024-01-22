@@ -9,8 +9,9 @@
   bottom: 18%;
   margin-left: 4.5%;
   z-index: 100;
+  gap: 25px;
   .product__image{
-    width: 556px;
+    width: 526px;
     height: 556px;
   }
   .info{
@@ -129,7 +130,7 @@
         }
       }
     }
-    .footer{
+    .footerView{
       margin-top: 24px;
       @include setFont(500, 0, capitalize, rgba(26, 26, 26, 1));
       .footer__category{

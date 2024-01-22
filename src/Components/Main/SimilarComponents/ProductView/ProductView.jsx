@@ -1,6 +1,7 @@
 import {NavLink} from "react-router-dom";
 
 export default function ProductView({prodView, setShowView}){
+    console.log(prodView)
     function createStars(stars, id){
         let rating = []
         for(let i = 0; i < stars; i++){
@@ -164,7 +165,7 @@ export default function ProductView({prodView, setShowView}){
                             </button>
                         </div>
                     </div>
-                    <div className="footer">
+                    <div className="footerView">
                         <p className="footer_text">Category: <span
                             className='footer__category'>{prodView.category}</span>
                         </p>

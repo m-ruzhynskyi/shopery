@@ -4,19 +4,35 @@ import {useEffect, useState} from "react";
 import ProductView from "../SimilarComponents/ProductView/ProductView";
 import {Route, Routes} from "react-router-dom";
 import Discount from "./DiscountBlock/Discount";
-export default function Home({data, setCart, setLikes, setProdView, prodView, setShowView, showView}){
+export default function Home({data, setCart, setLikes, setShowView, showView}){
     const [introProductsList, setIntroProductsList] = useState([])
+    const [prodView, setProdView] = useState()
+
+    function setView(current){
+        setShowView(!showView)
+        setProdView(data[0]["ourProducts"].filter(element => element.id.toString() === current.closest('.product').id)[0])
+    }
+
+    useEffect(() => {
+        showView ? document.body.style.overflow = 'hidden': document.body.style.overflow = '';
+    }, [showView]);
 
     useEffect( () => {
-        setIntroProductsList(data.ourProducts.filter(element => element.type === 'intro'))
-    }, [data.ourProducts])
+        data.length && setIntroProductsList(data[0]['ourProducts'].filter(element => element.type === 'intro'))
+    }, [data])
 
     return(
-        <div className='home'>
-            <Head data={data.head}/>
-            <IntroProducts setShowView={setShowView}  setProdView = {setProdView} data={introProductsList} setCart={setCart} setLikes={setLikes}/>
-            {showView && <Routes><Route path={prodView.title} element={<ProductView setShowView={setShowView} prodView={prodView}/>}/></Routes>}
-            <Discount data={data.discount}/>
-        </div>
+        <>
+            {data.map(element => {
+                return(
+                    <div className='home' key={'home'}>
+                        <Head data={element.head}/>
+                        <IntroProducts setShowView={setShowView}  setProdView = {(current)=>setView(current.target)} data={introProductsList} setCart={setCart} setLikes={setLikes}/>
+                        {showView && <Routes><Route path={prodView.title} element={<ProductView setShowView={setShowView} prodView={prodView}/>}/></Routes>}
+                        <Discount data={element['discount']}/>
+                    </div>
+                )
+            })}
+        </>
     )
 }
