@@ -137,5 +137,29 @@ export const main = {
             category: 'vegetable',
             type: "intro",
         },
+    ],
+    discount: [
+        {
+            id: 1,
+            img: '/assets/img/main/disc/disc3.png',
+            headText: 'Best deals',
+            title: 'Sale of the Month',
+            time: 2,
+        },
+        {
+            id: 2,
+            img: '/assets/img/main/disc/disc2.png',
+            headText: '85% fat free',
+            title: 'Low-fat Meat',
+            from: 79.99,
+        },
+        {
+            id: 3,
+            img: '/assets/img/main/disc/disc1.png',
+            headText: 'summer sale',
+            title: '100% Fresh fruit',
+            upTo: 64,
+        },
     ]
+
 }

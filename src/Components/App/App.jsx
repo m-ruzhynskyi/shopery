@@ -2,7 +2,7 @@ import Header from '../Header/Header'
 import {useEffect, useState} from "react";
 import Main from "../Main/Main";
 import {main} from "../dataMain";
-
+import Footer from "../Footer/Footer";
 
 function App() {
     let [cart, setCart] = useState(0);
@@ -60,7 +60,7 @@ function App() {
     <>
         <Header cart={cart} likes={likes} changeNumLikes = {(current) => changeNumLikes(current)}  likesHistory={likesHistory} changeNumInCart = {(current) => changeNumInCart(current)} cartHistory={cartHistory}/>
         <Main showView={showViewProduct} setShowView={() => setShowViewProduct(!showViewProduct)} setCart={(current) => changeNumInCart(current)} setLikes={(current) => changeNumLikes(current)}/>
-        <a className="goToTop" href='#header'>
+        <a className="goToTop" href='#'>
             <svg enableBackground="new 0 0 32 32" height="32px" viewBox="0 0 32 32" width="32px"
                  xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -68,6 +68,7 @@ function App() {
                     fill="#515151"/>
             </svg>
         </a>
+        <Footer/>
     </>
   );
 }

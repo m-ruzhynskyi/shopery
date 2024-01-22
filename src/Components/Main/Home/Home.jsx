@@ -3,6 +3,7 @@ import IntroProducts from "./IntroProducts/IntroProducts";
 import {useEffect, useState} from "react";
 import ProductView from "../SimilarComponents/ProductView/ProductView";
 import {Route, Routes} from "react-router-dom";
+import Discount from "./DiscountBlock/Discount";
 export default function Home({data, setCart, setLikes, setProdView, prodView, setShowView, showView}){
     const [introProductsList, setIntroProductsList] = useState([])
 
@@ -15,6 +16,7 @@ export default function Home({data, setCart, setLikes, setProdView, prodView, se
             <Head data={data.head}/>
             <IntroProducts setShowView={setShowView}  setProdView = {setProdView} data={introProductsList} setCart={setCart} setLikes={setLikes}/>
             {showView && <Routes><Route path={prodView.title} element={<ProductView setShowView={setShowView} prodView={prodView}/>}/></Routes>}
+            <Discount data={data.discount}/>
         </div>
     )
 }

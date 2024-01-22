@@ -1,0 +1,32 @@
+.notData {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: {
+    top: 100px;
+    bottom: 100px;
+  };
+  .notData__title{
+    @include setFont(600, 26, capitalize, rgb(26,26,26))
+  }
+  .notData__description{
+    @include setFont(400, 2, none, rgba(128, 128, 128, 1));
+    max-width: 612px;
+    text-align: center;
+    margin: {
+      top: 20px;
+      bottom: 24px;
+    };
+  }
+  .notData__home{
+    @include setFont(600, 0, capitalize, rgba(128, 128, 128, 1));
+    padding: 14px 32px;
+    border-radius: 43px;
+    background-color: #00B207;
+    border: none;
+    a{
+      color: white;
+    }
+  }
+}

@@ -1,11 +1,11 @@
 import '../../main.css'
 import {NavLink} from "react-router-dom";
-export default function BotMenu({setPage}) {
+export default function BotMenu({}) {
     return (
         <div className='wrapBotMenu'>
             <div className='botMenu'>
                 <div className='sections'>
-                    <NavLink className='section' to='home'>Home</NavLink>
+                    <NavLink className='section' to=''>Home</NavLink>
                     <NavLink className='section' to='shop'>Shop</NavLink>
                     <NavLink className='section' to='blog'>Blog</NavLink>
                     <NavLink className='section' to='aboutUs'>About Us</NavLink>
